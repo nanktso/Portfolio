@@ -1,0 +1,56 @@
+html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    width:100%
+    
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+.fundo{
+    padding: 0%;
+    background-image: linear-gradient(#E8EBEB,#5A5E60);
+    height: 100%;
+    padding-left:10px ;
+
+
+}
+h1{
+    margin: 0;
+}
+.tituloPag{
+    color: #353636;
+    font-size: 63px;
+
+}
+
+.codes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomeCod{
+    color: darkslategrey;
+    font-size: 50px;
+}
+
+.conteinerCod{
+    background-image: linear-gradient(#5A5E60,#5A5E60);
+    border: solid black 3px;
+    height: 500px;
+    width: 50%;
+    border-radius: 3%;
+}
+
+.codigo{
+    color: white;
+    padding-left: 10px;
+
+}
