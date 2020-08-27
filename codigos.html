@@ -17,22 +17,93 @@
                 <h1 class="tituloPag">Códigos</h1>
             </div>
             <div class="codes">
-                <h2 class="nomeCod">Nome</h2>
+                <h2 class="nomeCod">Curvas de Nível #PY</h2>
                 <div class="conteinerCod">
-                    <p class="codigo">codigo aqui dentro</p>
+                    <p class=explainCode>
+                        Código para classificar curvas de nível de cinco em cinco métros no ArcGIS.<br>
+                        Sendo curvas de 25m as curvas metras.
+                </p>
+                    <pre class="textcod">
+    "Curva_Mestras" if (!CONTOUR!/25).is_integer() else "Curvas_Intermediárias"
+                    </pre>
                 </div>
             </div>
             <div class="codes">
-                <h2 class="nomeCod">Nome</h2>
+                <h2 class="nomeCod">Comparar Palavras #PY</h2>
                 <div class="conteinerCod">
-                    <p class="codigo">codigo aqui dentro</p>
+                    <P class="explainCode">
+                        Código para comparar se duas palavras são iguais,
+                        ignorando acentos e se estão maiúsculas ou minúsculas.
+                    </P>
+                    <pre class="textcod">
+    from unicodedata import normalize
+
+    def Compare(nome1,nome2):
+    aux1=normalize('NFKD',nome1).encode('ASCII','ignore').decode('ASCII')
+        aux2=normalize('NFKD',nome2).encode('ASCII','ignore').decode('ASCII')
+        
+        if aux1.lower()==aux2.lower():
+            return('Ok')
+        else:
+            return('Não Ok')</pre>
                 </div>
             </div>
             <div class="codes">
-                <h2 class="nomeCod">Nome</h2>
+                <h2 class="nomeCod">Configurar Caminho Model Builder #PY</h2>
                 <div class="conteinerCod">
-                    <p class="codigo">codigo aqui dentro</p>
+                    <p class="explainCode">
+                        Código utilizado no Model Builder do ArcGIS para caso determinado output não for selecionado a ferramenta não
+                        realizar o processamento correspondente a esse output.
+                    </p>
+                    <pre class="textcod">
+    def pergunta(par1,par2):
+        import arcpy
+        if par1 == "false" and par2=="false":
+            return "false"
+        elif par1 == "true" and par2=="false":
+            return "true"
+        elif par1 == "false" and par2=="true":
+            return "true"
+        elif par1 == "true" and par2=="true":
+            return "true"
+                    </pre>
                 </div>
             </div>
+            <div class="codes">
+                <h2 class="nomeCod">Classificar Tamanho do Pixel #PY</h2>
+                <div class="conteinerCod">
+                    <p class="explainCode">
+                        Código utilizado no Model Builder do ArcGIS para classificar o tamanho dos pixels.  As funções serão utilizadas a posteriori em outras ferramentas que irão manipular os pixels e necessitam dessa informação para rodarem.
+                    </p>
+                    <pre class="textcod">
+    def pixel_ate_20(par):
+        import arcpy
+        if par <= 20:
+            return "true"
+        else:
+            return "false"
+
+    def maior_que_20(par):
+        import arcpy
+        if par > 20:
+            return "true"
+        else:
+            return "false"
+                    </pre>
+                </div>
+            </div>
+    <!-- Copiar e colar o código abaixo adicionar novos códigos -->
+<!--             <div class="codes">
+                <h2 class="nomeCod">Nome</h2>
+                <div class="conteinerCod">
+                    <p class="explainCode">
+                        Explicação do código
+                    </p>
+                    <pre class="textcod">
+                        
+                    </pre>
+                </div>
+            </div> -->
         </div>
+    </div>
     </body>
